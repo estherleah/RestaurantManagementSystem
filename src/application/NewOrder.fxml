@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.NewOrderController">
+   <children>
+      <Label fx:id="lblTableNumber" layoutX="36.0" layoutY="33.0" text="Table number">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblTableOrder" layoutX="36.0" layoutY="76.0" prefHeight="217.0" prefWidth="420.0">
+         <columns>
+            <TableColumn fx:id="colItem" prefWidth="134.0" text="Item" />
+            <TableColumn fx:id="colQuantity" prefWidth="70.0" text="Quantity" />
+            <TableColumn fx:id="colRequests" prefWidth="143.0" text="Special requests" />
+            <TableColumn fx:id="colPrice" prefWidth="72.0" text="Price" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="comboCategory" layoutX="307.0" layoutY="305.0" onAction="#listItems" prefWidth="150.0" promptText="Select category" />
+      <ComboBox fx:id="comboQuantity" layoutX="307.0" layoutY="341.0" prefHeight="25.0" prefWidth="150.0" promptText="Quantity" />
+      <TextField fx:id="txtRequests" layoutX="307.0" layoutY="377.0" promptText="Special requests" />
+      <Button fx:id="btnAddItem" layoutX="307.0" layoutY="412.0" mnemonicParsing="false" onAction="#addItem" prefHeight="25.0" prefWidth="92.0" text="Add item" />
+      <Button fx:id="btnDelete" layoutX="473.0" layoutY="268.0" mnemonicParsing="false" onAction="#confirmDelete" prefHeight="25.0" prefWidth="92.0" text="Delete item" />
+      <Button fx:id="btnOK" layoutX="473.0" layoutY="650.0" mnemonicParsing="false" onAction="#done" prefHeight="25.0" prefWidth="92.0" text="OK" />
+      <Button fx:id="btnAddComment" layoutX="36.0" layoutY="650.0" mnemonicParsing="false" onAction="#addComment" text="Add comment" />
+      <TextArea fx:id="txtComments" layoutX="37.0" layoutY="561.0" prefHeight="77.0" prefWidth="420.0" promptText="Additional comments" />
+      <Label layoutX="473.0" layoutY="561.0" text="Total:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="509.0" layoutY="561.0" text="£0.00">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listItems" layoutX="37.0" layoutY="305.0" prefHeight="245.0" prefWidth="250.0" />
+   </children>
+</AnchorPane>
