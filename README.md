@@ -1,5 +1,5 @@
 # Restaurant Management System
-Simple restaurant management system application built using JavaFx and SQLite.
+Simple restaurant management system application built using JavaFX and SQLite.
 
 ### Features
 1. GUI application in JavaFX.
