@@ -18,6 +18,7 @@ Simple restaurant management system application built using JavaFX and SQLite.
 14. Manager can export list of orders in csv form.
 15. Manager can edit the menu - add items, delete items, change prices.
 16. Manager can add and delete employees from the system.
+17. Manager can view the employee activity log.
 
 
 ### Login details
